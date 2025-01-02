@@ -1,9 +1,11 @@
 extends CharacterBody2D
 
-var speed = 400
+var speed = 300
 
 func _physics_process(delta):
+	
 	velocity = Vector2(0, 0)
+	
 	if Input.is_action_pressed("move_right"):
 		velocity.x = speed
 	if Input.is_action_pressed("move_left"):
@@ -12,4 +14,12 @@ func _physics_process(delta):
 		velocity.y = -speed
 	if Input.is_action_pressed("move_down"):
 		velocity.y = speed	
+		
 	move_and_slide()
+	
+	if global_position.x < 0:
+		global_position.x = 0
+	if global_position.x > 1280:
+		global_position.x = 1280
+	print(global_position)
+	
