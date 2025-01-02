@@ -21,5 +21,10 @@ func _physics_process(delta):
 		global_position.x = 0
 	if global_position.x > 1280:
 		global_position.x = 1280
+	if global_position.y < 0:
+		global_position.y = 0
+	if global_position.y > 720:
+		global_position.y = 720
+	
 	print(global_position)
 	
