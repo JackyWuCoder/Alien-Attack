@@ -11,4 +11,4 @@ func _physics_process(delta):
 	global_position.x += speed * delta
 
 func _on_screen_exited():
-	pass
+	queue_free()
