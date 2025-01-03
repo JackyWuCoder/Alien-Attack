@@ -26,4 +26,6 @@ func _physics_process(delta):
 	global_position = global_position.clamp(Vector2(0, 0), screen_size)
 
 func shoot():
-	print("shoot")
+	var rocket_scene = load("res://scenes/rocket.tscn")
+	var rocket_instance = rocket_scene.instantiate()
+	add_child(rocket_instance)
