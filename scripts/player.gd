@@ -29,4 +29,5 @@ func _physics_process(delta):
 
 func shoot():
 	var rocket_instance = rocket_scene.instantiate()
+	rocket_instance.global_position.x += 80
 	add_child(rocket_instance)
