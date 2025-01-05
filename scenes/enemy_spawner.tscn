@@ -21,3 +21,5 @@ position = Vector2(1350, 550)
 
 [node name="SpawnPos_06" type="Marker2D" parent="SpawnPositions"]
 position = Vector2(1350, 675)
+
+[node name="Timer" type="Timer" parent="."]
