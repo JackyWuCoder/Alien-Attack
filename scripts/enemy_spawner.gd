@@ -8,9 +8,9 @@ func _ready():
 	spawn_timer.connect("timeout", _on_timer_timeout)
 
 func _on_timer_timeout():
-	print("Timeout")
+	spawn_enemy()
 
 func spawn_enemy():
-	var enemy_instance = enemy_scene.instantate()
+	var enemy_instance = enemy_scene.instantiate()
 	enemy_instance.global_position = Vector2(1350, 300)
 	add_child(enemy_instance)
