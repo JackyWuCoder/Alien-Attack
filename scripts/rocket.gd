@@ -14,4 +14,5 @@ func _on_screen_exited():
 	queue_free()
 	
 func _on_area_entered(area):
-	print(area.name)
+	queue_free()
+	area.queue_free()
